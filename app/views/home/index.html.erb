@@ -1,0 +1,7 @@
+<%= form_tag("/games", method: "get") do %>
+    <%= label_tag(:team_name, "team:")%>
+    <%= text_field_tag(:team_name) %>
+    <%= label_tag(:ground_name, "ground:")%>
+    <%= text_field_tag(:ground_name) %>
+    <%= submit_tag("送信") %>
+<% end %>    

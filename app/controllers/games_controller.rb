@@ -4,7 +4,7 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
+    @games = Game.day_between(params[:day], params[:day]).ground_name_like(params[:ground_name]).team_name(params[:team_name],params[:team_name])
   end
 
   # GET /games/1
