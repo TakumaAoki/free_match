@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :team_name %>
-    <%= form.text_field :team_name %>
+    <%= form.collection select(:user, :team_name, Team.all, :team_name, :team_name,) %>
   </div>
 
   <div class="field">

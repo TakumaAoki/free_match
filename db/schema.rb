@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_09_091631) do
+ActiveRecord::Schema.define(version: 2020_01_20_021902) do
 
   create_table "games", force: :cascade do |t|
-    t.string "day"
     t.string "team_a"
     t.string "team_b"
     t.string "ground_name"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "day"
   end
 
   create_table "teams", force: :cascade do |t|
     t.string "team_name"
-    t.string "rank"
+    t.string "rank", default: "C"
     t.text "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
